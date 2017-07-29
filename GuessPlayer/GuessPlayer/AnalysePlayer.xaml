@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessPlayer.AnalysePlayer">
+    <StackLayout Margin="20" Orientation="Vertical">
+        <Button Text="Take Photo of Player" Clicked="OpenCamera" />
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="Player">
+            </Label>
+        </StackLayout>
+        <Image x:Name="image" Aspect="AspectFit"/>
+    </StackLayout>
+</ContentPage>
