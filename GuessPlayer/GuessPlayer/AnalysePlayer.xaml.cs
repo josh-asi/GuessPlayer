@@ -54,6 +54,7 @@ namespace GuessPlayer
             await MakePredictionRequest(file);
         }
 
+        
         static byte[] GetImageAsByteArray(MediaFile file)
         {
             var stream = file.GetStream();

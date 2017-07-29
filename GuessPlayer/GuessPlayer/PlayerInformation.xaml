@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GuessPlayer.PlayerInformation">
+             x:Class="GuessPlayer.PlayerInformation"
+             Title="Guess the NBA Player">
     <ContentPage.Content>
         <StackLayout>
             <Button Text="Refresh" TextColor="White" BackgroundColor="Red" Clicked="Handle_ClickedAsync" />
@@ -17,6 +18,14 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
+            <Label Text= "Update Age"/>
+            <Entry x:Name="targetPlayer" Text="Choose Player "/>
+            <Entry x:Name="newAge" Text="Update Age"/>
+            <Button Text="Update" TextColor="White" BackgroundColor="Red" Clicked="UpdateAgeAsync" />
+            
         </StackLayout>
+        
     </ContentPage.Content>
+
 </ContentPage>

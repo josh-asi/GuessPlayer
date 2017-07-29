@@ -43,5 +43,10 @@ namespace GuessPlayer
         {
             return await this.playerTable.ToListAsync();
         }
+
+        public async Task UpdateAge(GuessPlayerModel guessPlayerModel)
+        {
+            await this.playerTable.UpdateAsync(guessPlayerModel);
+        }
     }
 }

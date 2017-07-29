@@ -29,6 +29,23 @@ namespace GuessPlayer
             PlayerList.ItemsSource = playerInformation;
         }
 
+        async Task UpdateAgeAsync()
+        {
+            List<GuessPlayerModel> playerInformation = await AzureManager.AzureManagerInstance.GetPlayerInformation();
+
+            foreach (var p in playerInformation)
+            {
+                if (p.Name == targetPlayer.Text)
+                {
+                    p.Age = newAge.Text;
+
+                    await AzureManager.AzureManagerInstance.UpdateAge(p);
+                }
+            }
+
+        }
+
+        
 
     }
 }
