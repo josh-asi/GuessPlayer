@@ -3,6 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GuessPlayer.PlayerInformation">
     <ContentPage.Content>
-        <Label Text="Custom Vision Tab" VerticalOptions="Center" HorizontalOptions="Center" />
+        <StackLayout>
+            <Button Text="Refresh" TextColor="White" BackgroundColor="Red" Clicked="Handle_ClickedAsync" />
+            <ListView x:Name="PlayerList" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name, StringFormat='Name: {0:N}'}" HorizontalOptions="FillAndExpand" Margin="20,0,0,0" VerticalTextAlignment="Center" />
+                                <Label Text="{Binding Age, StringFormat='Age: {0:N}'}" VerticalTextAlignment="Center" Margin="0,0,20,0" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
